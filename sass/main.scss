@@ -1,0 +1,61 @@
+// Put any @imports here
+// See Readme for a list of supported ones
+@import "foundation";
+
+body {
+  // position: relative;
+  background-image: url(https://pbs.twimg.com/profile_images/1577427319/twitter_2_400x400.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-bottom: 15%;
+
+
+}
+.container {
+  width: 600px;
+  margin: 20px auto;
+}
+h3 {
+  color: white;
+}
+
+.audio {
+  background-color: #008cba;
+  padding: 15px 10px 10px 10px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: white;
+  span {
+    vertical-align: top;
+    display: inline-block;
+    padding-top: 6px;
+    font-size: 12px;
+    padding-left: 10px;
+  }
+}
+
+.track {
+  text-align: center;
+  cursor: pointer;
+  .trackInfo {
+    font-size: 12px;
+    margin-top: 10px;
+    color: white;
+  }
+.top-bar-section ul li {
+  font-size: 24px;
+}
+
+
+
+
+
+
+
+
+
+
+
+}
