@@ -6424,8 +6424,12 @@ h3 {
     color: white; }
   .track .top-bar-section ul li {
     font-size: 24px; }
-  .track .pic1 {
-    display: inline-block;
-    margin: 100px; }
+
+.info1 {
+  color: white;
+  font-size: 18px; }
+
+.pic1 {
+  display: inline-block; }
 
 /*# sourceMappingURL=main.css.map */
