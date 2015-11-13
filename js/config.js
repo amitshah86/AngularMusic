@@ -8,17 +8,17 @@ let config = function ($stateProvider) {
     .state('root.home', {
       url: '/',
       controller: 'HomeController', 
-      templateUrl: './template/home.tpl.html'
-    });
+      templateUrl: '/template/home.tpl.html'
+    })
     .state('root.about', {
       url: '/about',
       controller: 'AboutController',
-      templateUrl: './template/about.tpl.html'
-    });
+      templateUrl: '/template/about.tpl.html'
+    })
     .state('root.topTracks', {
       url: '/topTracks',
       controller: 'TopTracksController',
-      templateUrl: './template/topTracks.tpl.html'
+      templateUrl: '/template/topTracks.tpl.html'
     });
 
 

@@ -12,7 +12,15 @@ var config = function config($stateProvider) {
   }).state('root.home', {
     url: '/',
     controller: 'HomeController',
-    templateUrl: './template/home.tpl.html'
+    templateUrl: '/template/home.tpl.html'
+  }).state('root.about', {
+    url: '/about',
+    controller: 'AboutController',
+    templateUrl: '/template/about.tpl.html'
+  }).state('root.topTracks', {
+    url: '/topTracks',
+    controller: 'TopTracksController',
+    templateUrl: '/template/topTracks.tpl.html'
   });
 };
 
@@ -22,6 +30,35 @@ exports['default'] = config;
 module.exports = exports['default'];
 
 },{}],2:[function(require,module,exports){
+"use strict";
+
+// let AboutController = function($scope, SC, $http, $sce) {
+
+//   let url = 'http://api.soundcloud.com/tracks?client_id=' + SC;
+
+//   $scope.search = (query) => {
+
+//     query = encodeURI(query);
+
+//     $http.get(url + '&q=' + query).then( (res) => {
+//       $scope.songs = res.data;
+
+//     });
+
+//   };
+
+//   $scope.playMe = (song) => {
+//     $scope.audio = $sce.trustAsResourceUrl(song.stream_url + '?client_id=' + SC);
+//     $scope.playing = song;
+//   };
+
+// };
+
+// AboutController.$inject = ['$scope', 'SC', '$http', '$sce'];
+
+// export default AboutController;
+
+},{}],3:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -51,7 +88,10 @@ HomeController.$inject = ['$scope', 'SC', '$http', '$sce'];
 exports['default'] = HomeController;
 module.exports = exports['default'];
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
+"use strict";
+
+},{}],5:[function(require,module,exports){
 'use strict';
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -70,9 +110,17 @@ var _controllersHomeController = require('./controllers/home.controller');
 
 var _controllersHomeController2 = _interopRequireDefault(_controllersHomeController);
 
-_angular2['default'].module('app', ['ui.router']).constant('SC', 'be08eeed7f9d59c21c09f68da2ce0731').config(_config2['default']).controller('HomeController', _controllersHomeController2['default']);
+var _controllersAboutController = require('./controllers/about.controller');
 
-},{"./config":1,"./controllers/home.controller":2,"angular":6,"angular-ui-router":4}],4:[function(require,module,exports){
+var _controllersAboutController2 = _interopRequireDefault(_controllersAboutController);
+
+var _controllersTopTracksController = require('./controllers/topTracks.controller');
+
+var _controllersTopTracksController2 = _interopRequireDefault(_controllersTopTracksController);
+
+_angular2['default'].module('app', ['ui.router']).constant('SC', 'be08eeed7f9d59c21c09f68da2ce0731').config(_config2['default']).controller('HomeController', _controllersHomeController2['default']).controller('AboutController', _controllersAboutController2['default']).controller('TopTracksController', _controllersTopTracksController2['default']);
+
+},{"./config":1,"./controllers/about.controller":2,"./controllers/home.controller":3,"./controllers/topTracks.controller":4,"angular":8,"angular-ui-router":6}],6:[function(require,module,exports){
 /**
  * State-based routing for AngularJS
  * @version v0.2.15
@@ -4443,7 +4491,7 @@ angular.module('ui.router.state')
   .filter('isState', $IsStateFilter)
   .filter('includedByState', $IncludedByStateFilter);
 })(window, window.angular);
-},{}],5:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 /**
  * @license AngularJS v1.4.7
  * (c) 2010-2015 Google, Inc. http://angularjs.org
@@ -33348,11 +33396,11 @@ $provide.value("$locale", {
 })(window, document);
 
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
-},{}],6:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 require('./angular');
 module.exports = angular;
 
-},{"./angular":5}]},{},[3])
+},{"./angular":7}]},{},[5])
 
 
 //# sourceMappingURL=main.js.map
